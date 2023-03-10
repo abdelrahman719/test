@@ -1,0 +1,430 @@
+<div class="profile-page">
+  <h1>Profile</h1>
+  <div class="overview">
+    <div class="avatar-box">
+      <img src="assets/images/user (5).png" alt="" />
+      <h3 class="">
+        Welcome , {{ auth.response.body.user[0].fields["First Name"] }}
+      </h3>
+    </div>
+    <div class="info-box">
+      <div class="box">
+        <div>
+          <span class="static">Opportunity Name :</span>
+          <span>{{ auth.response.body.user[0].fields["Opportunity Name"] }}</span>
+        </div>
+        <div>
+          <span class="static">Account Name :</span>
+          <span>{{ auth.response.body.user[0].fields["Account Name"] }}</span>
+        </div>
+        <div>
+          <span class="static">Booth Name :</span>
+          <span>{{ auth.response.body.user[0].fields["Booth Name"] }}</span>
+        </div>
+        <div>
+          <span class="static">Amount:</span>
+          <span>{{ auth.response.body.user[0].fields["Amount"] }}</span>
+        </div>
+        <div>
+          <span class="static">Lead Source :</span>
+          <span>{{ auth.response.body.user[0].fields["Lead Source"] }}</span>
+        </div>
+        <div>
+          <span class="static">Email Address:</span>
+          <span id="email">{{
+            auth.response.body.user[0].fields["Email Address"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Close Date :</span>
+          <span id="c-date">{{
+            auth.response.body.user[0].fields["Close Date"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Stage :</span>
+          <span id="Stage">{{ auth.response.body.user[0].fields["Stage"]}}</span>
+        </div>
+        <div>
+          <span class="static">Sync Stage :</span>
+          <span id="Stage">{{ auth.response.body.user[0].fields["Sync Source"]}}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Probability (%) :</span>
+          <span id="Probability">{{
+            auth.response.body.user[0].fields["Probability (%)"]
+           | percent}}</span>
+        </div>
+        <div>
+          <span class="static">Billing Exemption :</span>
+          <span id="Billing-Exemp">{{
+            auth.response.body.user[0].fields["Billing Exemption"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Primary Contact :</span>
+          <span id="Prim-Contact">{{
+            auth.response.body.user[0].fields["Primary Contact"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Created Date :</span>
+          <span id="Created-Dated">{{
+            auth.response.body.user[0].fields["Created Date"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Reason for Lost :</span>
+          <span id="lost-reason">{{
+            auth.response.body.user[0].fields["Reason for Lost"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Opportunity Record Type :</span>
+          <span id="opp-rec-type">{{
+            auth.response.body.user[0].fields["Opportunity Record Type"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Account Notes :</span>
+          <span id="acc-notes">{{
+            auth.response.body.user[0].fields["Account Notes"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Payment Terms :</span>
+          <span id="acc-notes">{{
+            auth.response.body.user[0].fields["Payment Terms"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Vendor Type :</span>
+          <span id="vendor-type">{{
+            auth.response.body.user[0].fields["Vendor Type"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Booth Size :</span>
+          <span id="Booth-Size">{{
+            auth.response.body.user[0].fields["Booth Size"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Interested Events Dates :</span>
+          <span id="events-dates" style="word-break: break-all">{{
+            auth.response.body.user[0].fields["Interested Events Dates"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Interested Event Locations :</span>
+          <span id="event-locs">{{
+            auth.response.body.user[0].fields["Interested Event Locations"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Items Interested in Selling :</span>
+          <span id="inter-selling">{{
+            auth.response.body.user[0].fields["Items Interested in Selling"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Food Truck Permit :</span>
+          <span id="food-truck">{{
+            auth.response.body.user[0].fields["Food Truck Permit"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Vendor Exclusive Items :</span>
+          <span id="vendor-items">{{
+            auth.response.body.user[0].fields["Vendor Exclusive Items"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Master Vendor Agreement :</span>
+          <span id="vendor-agree">{{
+            auth.response.body.user[0].fields["Master Vendor Agreement"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Created By :</span>
+          <span id="created-by">{{
+            auth.response.body.user[0].fields["Created By"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Record Date :</span>
+          <span id="Record-Date">{{
+            auth.response.body.user[0].fields["Record Date"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Billing Notes :</span>
+          <span id="Billing-Notes">{{
+            auth.response.body.user[0].fields["Billing Notes"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Phone Number :</span>
+          <span id="Phone-Number">{{
+            auth.response.body.user[0].fields["Phone Number"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Contacted SM :</span>
+          <span id="contacted-sm">{{
+            auth.response.body.user[0].fields["Contacted SM"]
+          }}</span>
+        </div>
+        <!-- <div>
+          <span class="static">Invoices - Payment History :</span>
+          <span id="Payment-History" style="word-break: break-all">{{
+            auth.response.body.user[0].fields["Invoices - Payment History"]
+          }}</span>
+        </div> -->
+        <div>
+          <span class="static">Total Invoices Amount :</span>
+          <span id="invoices-amount">{{
+            auth.response.body.user[0].fields["Total Invoices Amount"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Total Paid Amount :</span>
+          <span id="t-p-amount">{{
+            auth.response.body.user[0].fields["Total Paid Amount"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Total Balance :</span>
+          <span id="t-balance">{{
+            auth.response.body.user[0].fields["Total Balance"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Invoices Summary :</span>
+          <span id="invoices-sum">{{
+            auth.response.body.user[0].fields["Invoices Summary"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Earliest Invoice Date(Not Paid) :</span>
+          <span id="not-paid">{{
+            auth.response.body.user[0].fields["Earliest Invoice Date(Not Paid)"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Number of Unpaid Invoices :</span>
+          <span id="num-unpaid">{{
+            auth.response.body.user[0].fields["Number of Unpaid Invoices"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Latest Sent SMS Reminder(Balance Due) :</span>
+          <span id="balance-due">{{
+            auth.response.body.user[0].fields[
+              "Latest Sent SMS Reminder(Balance Due)"
+            ]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Website_Status :</span>
+          <span id="status">{{
+            auth.response.body.user[0].fields["Website_Status"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Posted :</span>
+          <span id="posted">{{ auth.response.body.user[0].fields["Posted"]}}</span>
+        </div>
+        <div>
+          <span class="static">First Name :</span>
+          <span id="f-name" class="first-name">{{
+            auth.response.body.user[0].fields["First Name"]
+          }}</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div>
+          <span class="static">Today Date(Helper Field) :</span>
+          <span id="today">{{
+            auth.response.body.user[0].fields["Today Date (Helper Field)"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Event Dates(Not Paid) :</span>
+          <span id="event-date">{{
+            auth.response.body.user[0].fields["Event Dates(Not Paid)"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">SMS Sending Time :</span>
+          <span id="SMS-Time">{{
+            auth.response.body.user[0].fields["SMS Sending Time"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Instagram Handle :</span>
+          <span id="instagram">{{
+            auth.response.body.user[0].fields["Instagram Handle"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">TikTok Handle :</span>
+          <span id="tiktok">{{
+            auth.response.body.user[0].fields["TikTok Handle"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Published Items :</span>
+          <span id="P-items">{{
+            auth.response.body.user[0].fields["Published Items"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Opportunity Case Safe ID :</span>
+          <span id="safe-id">{{
+            auth.response.body.user[0].fields["Opportunity Case Safe ID"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Possibly interested In Vegas:</span>
+          <span id="vegas">{{
+            auth.response.body.user[0].fields["Possibly interested In Vegas"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Vegan/Vegetarian :</span>
+          <span id="vegan">{{
+            auth.response.body.user[0].fields["Vegan/Vegetarian"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Vendor Headline</span>
+          <span id="v-headline">{{
+            auth.response.body.user[0].fields["Vendor Headline"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">About Vendor:</span>
+          <span id="about-vendor">{{
+            auth.response.body.user[0].fields["About Vendor"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Seller's Permit :</span>
+          <span id="seller-permit">{{
+            auth.response.body.user[0].fields["Seller's Permit"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Business License :</span>
+          <span id="business-license">{{
+            auth.response.body.user[0].fields["Business License"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Liability Insurance :</span>
+          <span id="liability">{{
+            auth.response.body.user[0].fields["Liability Insurance"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Commercial Kitchen Permit :</span>
+          <span id="kichen-permit">{{
+            auth.response.body.user[0].fields["Commercial Kitchen Permit"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">RB Review :</span>
+          <span id="rb-review">{{
+            auth.response.body.user[0].fields["RB Review"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Dropbox - Linked Record :</span>
+          <span id="dropbox-linked-record">{{
+            auth.response.body.user[0].fields["Dropbox - Linked Record"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Dropbox Link :</span>
+          <span id="Dropbox">{{
+            auth.response.body.user[0].fields["Dropbox Link"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Box Folder :</span>
+          <span *ngIf="auth.response.body.user[0].fields['Box Folder']" id="box-folder">{{
+            auth.response.body.user[0].fields["Box Folder"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Menu Graphics :</span>
+          <span *ngIf="auth.response.body.user[0].fields['Menu Graphics']" id="Menu-Graphics">{{
+            auth.response.body.user[0].fields["Menu Graphics"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Product Pictures :</span>
+          <span *ngIf="auth.response.body.user[0].fields['Product Pictures']" id="Product-Pictures">{{auth.response.body.user[0].fields["Product Pictures"][0].url}}</span>
+        </div>
+        <div>
+          <span class="static">Menu & Pricing :</span>
+          <span id="Menu-Pricing">{{
+            auth.response.body.user[0].fields["Menu & Pricing"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Buy Insurance :</span>
+          <span id="Buy-Insurance">{{
+            auth.response.body.user[0].fields["Buy Insurance"]
+          }}</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="static">Food Ethnicity :</span>
+          <span id="food">{{
+            auth.response.body.user[0].fields["Food Ethnicity"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Salesforce URL :</span>
+          <span id="salesforce-link">{{
+            auth.response.body.user[0].fields["Salesforce URL"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">Salesforce Label :</span>
+          <span id="Salesforce">{{
+            auth.response.body.user[0].fields.Salesforce['label']
+          }}</span>
+        </div>
+        <div>
+          <span class="static">LVMS Exclusions :</span>
+          <span id="lvms-ex">{{
+            auth.response.body.user[0].fields["LVMS Exclusions"]
+          }}</span>
+        </div>
+        <div>
+          <span class="static">LVMS Notes :</span>
+          <span id="lvms-notes">{{
+            auth.response.body.user[0].fields["LVMS Notes"]
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

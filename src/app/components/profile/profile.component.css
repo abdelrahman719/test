@@ -1,0 +1,112 @@
+.profile-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 20px;
+  min-height: 500px;
+}
+.profile-page h1 {
+  position: relative;
+  margin: 10px 20px 40px;
+  font-size: 45px;
+}
+.profile-page h1::before,
+.profile-page h1::after {
+  content: "";
+  height: 5px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 3px;
+}
+.profile-page h1::before {
+  background-color: #eee;
+  width: 140px;
+}
+.profile-page h1::after {
+  background-color: #aa0f0a;
+  width: 50px;
+}
+.profile-page .overview {
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .profile-page .overview {
+    flex-direction: column;
+  }
+}
+.profile-page .overview .avatar-box {
+  margin-top: 21.825px;
+  align-self: flex-start;
+  width: 350px;
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .profile-page .overview .avatar-box {
+    border-right: 2px solid white;
+  }
+}
+.profile-page .overview .avatar-box img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.profile-page .overview .avatar-box h3 {
+  margin: 0;
+}
+.profile-page .overview .avatar-box p {
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+.profile-page .overview .info-box .box {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #fff;
+  transition: 0.3s;
+}
+.profile-page .overview .info-box .box > div {
+  padding: 10px 0 0;
+  width: 50%;
+  margin-bottom: 15px;
+}
+.profile-page .overview .info-box {
+  width: 1000px;
+}
+@media (max-width: 768px) {
+  .profile-page .overview .info-box .box > div {
+    width: 200px;
+  }
+  .profile-page .overview .info-box {
+    width: auto;
+  }
+  .profile-page .overview .avatar-box {
+    margin-top: 21.825px;
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    align-self: center;
+  }
+}
+.profile-page .overview .info-box .box .static {
+  color: gray;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .profile-page .overview .info-box .box {
+    width: 250px;
+  }
+}
+.profile-page .overview .info-box .box h4 {
+  font-size: 18px;
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
